@@ -18,9 +18,9 @@
  <div class="form-group">
     <label>Ваш парикхмахер:</label>
     <select name="parik" class="form-control">
-      <option>Ксения</option>
-      <option>Марина</option>
-      <option>Наталья</option>
+      <option <%= @parik == 'Ксения' ? 'selected' : "" %>>Ксения</option>
+      <option <%= @parik == 'Марина' ? 'selected' : "" %>>Марина</option>
+      <option <%= @parik == 'Наталья' ? 'selected' : "" %>>Наталья</option>
     </select>
   </div>
 
