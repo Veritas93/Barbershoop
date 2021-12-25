@@ -1,0 +1,11 @@
+<h2>Добро пожаловать Сергей</h2>
+<p>Список ващих клиентов</p>
+
+<table border='1'>
+<% @file.each_line do |line| %>
+	<tr><td><%= line %></td></tr>
+<% end %>
+</table>
+
+<%= @file.close %>
+

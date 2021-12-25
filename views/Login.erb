@@ -1,0 +1,20 @@
+<h2>Добрый день</h2>
+<p>Введите ваши данные</p>
+
+<p> <%= @message %> </p>
+
+<form action="/Login" method="POST" role="form">
+
+  <div class="form-group">
+    <label>Введите ваш Login</label>
+    <input name="user" type="text" class="form-control" placeholder="Login">
+  </div>
+
+  <div class="form-group">
+    <label>Введите ваш пароль</label>
+    <input name="password" type="text" class="form-control" placeholder="Password">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Login</button>
+
+</form>
