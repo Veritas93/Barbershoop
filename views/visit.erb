@@ -27,7 +27,7 @@
 
   <div class="form-group">
     <label>Когда вас ждать?</label>
-    <input name="date_times" type="text" class="form-control" placeholder="Введите дату и время" value="<%= @date_times %>" >
+    <input id="datetimepicker" name="date_times" type="text" class="form-control" placeholder="Введите дату и время" value="<%= @date_times %>" >
   </div>
 
   <div class="form-group">
@@ -53,7 +53,14 @@
 </form>
 
 <script type="text/javascript">
+
 $(function() {
-	$('#color').simplecolorpicker();
+  
+  
+  $('#color').simplecolorpicker();
+  $('#datetimepicker').datetimepicker();
+
 });
+
 </script>
+
