@@ -1,0 +1,16 @@
+<h2>Добро пожаловать Сергей</h2>
+<p>Список ващих клиентов</p>
+
+<table class="table">
+<% @results.each do |row| %>
+	
+	<tr>
+		<td><%= row[1] %></td>
+		<td><%= row[3] %></td>
+		<td><%= row[2] %></td>
+		<td><%= row[4] %></td>
+		<td><%= row[5] %></td>		
+	</tr>
+<% end %>
+</table>
+

@@ -30,6 +30,10 @@ get '/about' do
 	haml :about
 end
 
+get '/admin' do
+	erb :admin
+end
+
 get '/visit' do
 	erb :visit
 end
@@ -58,8 +62,9 @@ post '/Login' do
 	@user = params[:user]
 	@password = params[:password]
 	if @user == 'Sergey' && @password == 'VeRiTaS'
-		@file = File.open("./public/users.txt", "r")
-		erb :contacts
+		db = get_db
+		@results = db.execute 'select * from Users order by id desc'
+		erb :admin
 	else
 		@message = "Access denied"
 		erb :Login
