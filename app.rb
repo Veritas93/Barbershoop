@@ -15,8 +15,16 @@ def seed_db db, barbers
 	end
 end
 
+
 def get_db
-	return SQLite3::Database.new 'barbershop.db'
+	db = SQLite3::Database.new 'barbershop.db'
+	db.results_as_hash = true
+	return db
+end
+
+before do
+	db = get_db
+	@barbers = db.execute 'select * from Barbers'
 end
 
 configure do
@@ -38,7 +46,7 @@ configure do
 	 	 	"name" TEXT
 	 	 	
 	 	)'
-	seed_db db, ['Ксения', 'Марина', 'Наталья'] 	
+	seed_db db, ['Kseny', 'Mariy', 'Nataliy'] 	
 end
 	
 
